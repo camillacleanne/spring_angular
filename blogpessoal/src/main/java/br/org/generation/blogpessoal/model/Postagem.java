@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -34,6 +35,21 @@ public class Postagem {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 
+	/**
+	 * O Atributo curtidas irá armazenar no Banco de Dados o total de curtidas
+	 * que a Postagem teve.
+	 * 
+	 * A anottation @PositiveOrZero evita numeros negativos
+	 * 
+	 * Não esqueça de criar os Métodos Get e Set
+	 * 
+	 * A implemntação dos métodos Curtir e Descurtir estão na classe de serviço
+	 * PostagemService
+	 */
+
+	@PositiveOrZero
+	private int curtidas;
+	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
@@ -76,6 +92,17 @@ public class Postagem {
 
 	public void setTema(Tema tema) {
 		this.tema = tema;
+	}
+
+	/**
+	 * Métodos Get e Set do atributo curtidas
+	 */
+	public int getCurtidas() {
+		return curtidas;
+	}
+
+	public void setCurtidas(int curtidas) {
+		this.curtidas = curtidas;
 	}
 
 }

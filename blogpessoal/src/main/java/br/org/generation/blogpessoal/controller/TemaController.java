@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.org.generation.blogpessoal.model.Tema;
 import br.org.generation.blogpessoal.repository.TemaRepository;
+import br.org.generation.blogpessoal.service.TemaService;
 
 @RestController
 @RequestMapping("/temas")
@@ -25,6 +26,10 @@ public class TemaController {
     
     @Autowired
 	private TemaRepository temaRepository;
+
+	/** Injeção de dependência da Classe de Serviço (TemaService) */
+	@Autowired
+   	private TemaService temaService;
 
 	@GetMapping
 	public ResponseEntity<List<Tema>> getAll() {
@@ -68,5 +73,15 @@ public class TemaController {
 		temaRepository.deleteById(id);
 	}
 
+	/*
+	 * Retorna o total de posts por tema (Trend Topics)
+	 * */
+	
+	@GetMapping("/trendtopics")
+	public ResponseEntity<List<Tema>> getTrendTopics() {
+		
+		return ResponseEntity.ok(temaService.trendTopics());
+	
+	}
 
 }

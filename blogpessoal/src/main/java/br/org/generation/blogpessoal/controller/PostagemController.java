@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.org.generation.blogpessoal.model.Postagem;
 import br.org.generation.blogpessoal.repository.PostagemRepository;
+import br.org.generation.blogpessoal.service.PostagemService;
 
 @RestController
 @RequestMapping("/postagens")
@@ -26,6 +27,10 @@ public class PostagemController {
 
 	@Autowired
 	private PostagemRepository postagemRepository;
+
+	/** Injeção de dependência da Classe de Serviço (PostagemService) */
+	@Autowired
+	private PostagemService postagemService;
 
 	/*
 	 * Listar todas as postagens
@@ -129,6 +134,28 @@ public class PostagemController {
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 
+	}
+	
+	/*
+	 * Método Curtir Postagens - Implementado na classe PostagemService
+	 * */
+	
+	@PutMapping("/curtir/{id}")
+	public ResponseEntity<Postagem> putCurtirPostagemId (@PathVariable Long id){
+		
+		return ResponseEntity.status(HttpStatus.OK).body(postagemService.curtir(id));
+	
+	}
+	
+	/*
+	 * Método Descurtir Postagens - Implementado na classe PostagemService
+	 * */
+	
+	@PutMapping("/descurtir/{id}")
+	public ResponseEntity<Postagem> putDescurtirPostagemId (@PathVariable Long id){
+		
+		return ResponseEntity.status(HttpStatus.OK).body(postagemService.descurtir(id));
+	
 	}
 	
 }

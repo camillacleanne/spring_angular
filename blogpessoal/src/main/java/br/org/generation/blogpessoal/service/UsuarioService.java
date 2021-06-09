@@ -30,7 +30,7 @@ import br.org.generation.blogpessoal.repository.UsuarioRepository;
 @Service
 public class UsuarioService {
 
-	/* Injeção de dependência (Usuario Repository) */
+	/* Injeção de dependência (UsuarioRepository) */
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 

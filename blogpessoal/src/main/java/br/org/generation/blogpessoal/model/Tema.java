@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -23,6 +24,22 @@ public class Tema {
 	
 	@NotNull(message = "Atributo obrigatório")
 	private String descricao;
+	
+	/**
+	 * O Atributo qtdTema irá armazenar no Banco de Dados o total de postagens
+	 * associadas a este tema.
+	 * 
+	 * A anottation @Transient impede que este atributo seja criado na tabela
+	 * de temas do Banco de dados, ou seja, ele só existe na Classe
+	 * 
+	 * Não esqueça de criar os Métodos Get e Set
+	 * 
+	 * A implemntação do método trendTopics está na classe de serviço
+	 * TemaService
+	 */
+
+	@Transient
+	private int qtdTema;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
@@ -52,5 +69,16 @@ public class Tema {
 		this.postagem = postagem;
 	}
 	
+	/**
+	 * Métodos Get e Set do atributo qtdTema
+	 */
+
+	public int getQtdTema() {
+		return qtdTema;
+	}
+
+	public void setQtdTema(int qtdTema) {
+		this.qtdTema = qtdTema;
+	}
 	
 }
