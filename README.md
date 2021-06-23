@@ -14,6 +14,10 @@ Requisitos de software (<a href="https://github.com/rafaelq80/Spring/blob/main/s
 
 <a href="https://spring.io/" target="_blank">Documentação Oficial do Spring</a>
 
+<a href="https://maven.apache.org/" target="_blank">Documentação Oficial do Maven</a>
+
+<a href="https://mvnrepository.com/" target="_blank">Repositório do Maven</a>
+
 <a href="https://www.baeldung.com/" target="_blank">Baeldung</a>
 
 <a href="https://blog.algaworks.com/" target="_blank">Blog da Algaworks</a>
