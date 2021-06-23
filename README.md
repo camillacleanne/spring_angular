@@ -1,10 +1,22 @@
 # Spring
+
 Exemplos - Aulas de Spring - Generation
-<!--
-1. HelloWorld - Aula 01
-2. BlogPessoal - Projeto Base
-3. Exercício - Loja de Games
-4. Exercício - Farmácia
-5. Testes com Junit (Blog Pessoal) - tddJunitblogpessoal
-6. Deploy da API no Heroku + Documentação no Swagger (Blog Pessoal) - deployblogPessoal
--->
+
+<div align="center"><img src="https://i.imgur.com/w8tTOuT.png" title="source: imgur.com" /></div>
+
+
+
+## Ferramentas
+
+Requisitos de software (<a href="https://github.com/rafaelq80/Spring/blob/main/sts/" target="_blank">Clique aqui</a>)
+
+# Referências sobre Spring
+
+<a href="https://spring.io/" target="_blank">Documentação Oficial do Spring</a>
+
+<a href="https://www.baeldung.com/" target="_blank">Baeldung</a>
+
+<a href="https://blog.algaworks.com/" target="_blank">Blog da Algaworks</a>
+
+<a href="https://www.michellibrito.com/" target="_blank">Michelli Brito</a>
+
