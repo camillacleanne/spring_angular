@@ -1,10 +1,24 @@
 # Spring
 
-Exemplos - Aulas de Spring - Generation
+Aulas sobre Spring - Generation
 
 <div align="center"><img src="https://i.imgur.com/w8tTOuT.png" title="source: imgur.com" /></div>
 
 
+
+## Aulas
+
+Aula 03 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_03/" target="_blank">Clique aqui</a>) - CRUD Postagens - Métodos (findById, Post, Put e Delete)
+
+Aula 02 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_02/" target="_blank">Clique aqui</a>) - CRUD Postagens - Configuração do projeto, POM.xml, application.properties, Model, Repository e Controller (método findAll)
+
+Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target="_blank">Clique aqui</a>) - Hello World!
+
+## Apostilas
+
+Guia JPA (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/guia_jpa.pdf" target="_blank">Clique aqui</a>) - Hello World!
+
+Guia de Atalhos - Eclipse (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/atalhos_eclipse" target="_blank">Clique aqui</a>) - Hello World!
 
 ## Ferramentas
 
