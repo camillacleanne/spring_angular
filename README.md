@@ -18,9 +18,9 @@ Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target
 
 ## Apostilas
 
-Guia JPA (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/guia_jpa.pdf" target="_blank">Clique aqui</a>) - Hello World!
+Guia JPA (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/guia_jpa.pdf" target="_blank">Clique aqui</a>) 
 
-Guia de Atalhos - Eclipse (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/atalhos_eclipse.pdf" target="_blank">Clique aqui</a>) - Hello World!
+Guia de Atalhos - Eclipse (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/atalhos_eclipse.pdf" target="_blank">Clique aqui</a>)
 
 ## Ferramentas
 
