@@ -16,8 +16,6 @@ Aula 02 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_02/" target
 
 Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target="_blank">Clique aqui</a>) - Hello World!
 
-Documentação do Blog Pessoal (<a href="https://github.com/rafaelq80/Spring/blob/main/documentacao/" target="_blank">Clique aqui</a>) - Diagrama de Classes e Diagrama de Entidades e Relacionamentos
-
 ## Apostilas
 
 Guia JPA (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/guia_jpa.pdf" target="_blank">Clique aqui</a>) - Hello World!
