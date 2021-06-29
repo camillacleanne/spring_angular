@@ -1,7 +1,7 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+![GitHub contributors](https://img.shields.io/github/contributors/rafaelq80/spring)
+![GitHub forks](https://img.shields.io/github/forks/rafaelq80/spring?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/rafaelq80/spring?style=social)
+![GitHub issues](https://img.shields.io/github/issues/rafaelq80/spring)
 
 # Blog Pessoal
 
@@ -15,7 +15,7 @@
   <summary>Sumário</summary>
   <ol>
     <li>
-      <a href="#projeto">O Projeto</a>
+      <a href="#o-projeto">O Projeto</a>
       <ul>
         <li><a href="#ferramentas">Tecnologias utilizadas</a></li>
       </ul>
