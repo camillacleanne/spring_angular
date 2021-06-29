@@ -21,7 +21,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Iniciando/a>
+      <a href="#getting-started">Iniciando</a>
       <ul>
         <li><a href="#prerequisites">Pré requisitos</a></li>
         <li><a href="#installation">Instalação</a></li>
