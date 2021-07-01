@@ -8,7 +8,7 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
-Exercício de Revisão - Loja de Games (<a href="https://github.com/rafaelq80/Spring/blob/main/lojagame/" target="_blank">Clique aqui</a>) - CRUD completo e Relacionamento entre as Classes Categoria e Produto (Projeto Referência)
+Exercício de Revisão - Loja de Games (<a href="https://github.com/rafaelq80/Spring/blob/main/lojagames/" target="_blank">Clique aqui</a>) - CRUD completo e Relacionamento entre as Classes Categoria e Produto (Projeto Referência)
 
 Aula 04 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_04/" target="_blank">Clique aqui</a>) - CRUD da Classe Tema e Relacionamento com a Classe Postagem
 
