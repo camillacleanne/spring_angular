@@ -1,8 +1,6 @@
 # Implementando a Camada de Segurança com o Spring Security no Blog Pessoal
 
-Nesta atividade iremos implementar a cama de segurança da aplicação com o Spring Security. 
-
-
+Nesta atividade iremos implementar a camada de segurança da aplicação com o Spring Security. 
 
 <h2>Boas Práticas</h2>
 
