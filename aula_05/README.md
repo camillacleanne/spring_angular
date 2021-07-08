@@ -1,38 +1,6 @@
-# Implementando a Camada de Segurança com o Spring Security no Blog Pessoal
+<h1>Spring Security no Blog Pessoal</h1>
 
-Nesta atividade iremos implementar a camada de segurança da aplicação com o Spring Security. 
 
-<h2>Boas Práticas</h2>
-
-- [ ] Configure as Dependências no arquivo pom.xml
-  - [ ] spring-boot-starter-security
-  - [ ] commons-codec
-- [ ] Configure o Banco de Dados
-- [ ] Crie a Classe Usuario na Camada Model
-  - [ ] Crie o Relacionamento (One to Many) com a Classe Postagem
-  - [ ] Crie os Métodos Get e Set
-- [ ] Crie o Relacionamento (Many to one) entre as Classes Postagem e Usuario na Classe Postagem na Camada Model
-- [ ] Crie a Classe UsuarioLogin na Camada Model
-  - [ ] Crie os Métodos Get e Set
-- [ ] Crie a Classe UsuarioRepository Camada Repository
-  - [ ] Crie o Método findByUsuario()
-- [ ] Crie a Classe UsuarioController na Camada Controller
-  - [ ] Crie o Método Login
-  - [ ] Crie o Método Post
-  - [ ] Crie o Método Put
-  - [ ] Crie o Método GetAll
-  - [ ] Crie o Método GetById()
-- [ ] Crie a classe BasicSecurityConfig na Camada Security
-- [ ] Crie a classe UserDetailsImpl na Camada Security
-- [ ] Crie a classe UserDetailsService na Camada Security
-- [ ] Crie a classe UsuarioService na Camada Service
-  - [ ] Crie o Método Login
-  - [ ] Crie o Método Post
-  - [ ] Crie o Método Put
-- [ ] Execute os testes no Postman
-  - [ ] Cadastrar Usuário
-  - [ ] Logar com o Usuário para receber o Token
-  - [ ] Inserir o Token no Cabeçalho de todos os métodos antes de testar
 
 <h2>Criptografia</h2>
 
