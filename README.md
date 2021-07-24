@@ -12,10 +12,6 @@ Aula 06 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_06/" target
 
 Aula 05 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_05/" target="_blank">Clique aqui</a>) - Spring Security
 
-Exercício de Revisão 02 - Farmácia (<a href="https://github.com/rafaelq80/Spring/blob/main/farmacia/" target="_blank">Clique aqui</a>) - CRUD completo e Relacionamento entre as Classes Categoria e Produto (Projeto Referência) + Métodos com 2 atributos na Interface ProdutoRepository implementados na classe Produto Controller
-
-Exercício de Revisão 01 - Loja de Games (<a href="https://github.com/rafaelq80/Spring/blob/main/lojagames/" target="_blank">Clique aqui</a>) - CRUD completo e Relacionamento entre as Classes Categoria e Produto (Projeto Referência)
-
 Aula 04 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_04/" target="_blank">Clique aqui</a>) - CRUD da Classe Tema e Relacionamento com a Classe Postagem
 
 Aula 03 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_03/" target="_blank">Clique aqui</a>) - CRUD Postagens - Métodos (findById, findAllByTituloContainingIgnoreCase, Post, Put e Delete)
@@ -24,15 +20,21 @@ Aula 02 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_02/" target
 
 Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target="_blank">Clique aqui</a>) - Hello World!
 
-## Apostilas
+
+
+## Ebooks
 
 Guia JPA (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/guia_jpa.pdf" target="_blank">Clique aqui</a>) 
 
 Guia de Atalhos - Eclipse (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/atalhos_eclipse.pdf" target="_blank">Clique aqui</a>)
 
+
+
 ## Ferramentas
 
 Requisitos de software (<a href="https://github.com/rafaelq80/Spring/blob/main/sts/" target="_blank">Clique aqui</a>)
+
+
 
 # Referências sobre Spring
 

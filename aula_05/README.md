@@ -2,10 +2,6 @@
 
 
 
-<h2>Criptografia</h2>
-
-<a href="https://github.com/rafaelq80/Spring/tree/main/aula_05/criptografia" target="_blank">Conteúdo de apoio sobre Criptografia</a>
-
 <h2>Referências</h2>
 
 <a href="https://spring.io/projects/spring-security" target="_blank">Documentação Oficial do Spring Security</a>
