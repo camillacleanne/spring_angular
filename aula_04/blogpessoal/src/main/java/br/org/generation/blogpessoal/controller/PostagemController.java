@@ -21,7 +21,7 @@ import br.org.generation.blogpessoal.repository.PostagemRepository;
 
 /**
  * 
- * /@RestController: Annotation (Anotação), que indica que a Classe é uma RestController,
+ * Annotation @RestController: Annotation (Anotação), que indica que a Classe é uma RestController,
  * ou seja, é responsável por responder às requisições http enviadas para um endpoint
  * (endereço) definido na anotação @RequestMapping
  * 
@@ -34,7 +34,7 @@ import br.org.generation.blogpessoal.repository.PostagemRepository;
  * acesso à nossa API (O termo técnico é consumir a API)
  * 
  * Para as versões mais recentes do Angular, recomenda-se alterar esta anotação para: 
- * /@CrossOrigin(origins = "*", allowedHeaders = "*") 
+ * Annotation @CrossOrigin(origins = "*", allowedHeaders = "*") 
  * Esta anotação, além de liberar as origens, libera também os cabeçalhos das requisições
  * 
  */
@@ -65,7 +65,7 @@ public class PostagemController {
 	/**
 	 * Listar todas as Postagens
 	 *  
-	 * /@GetMapping: Annotation (Anotação), que indica que o método abaixo responderá todaas as 
+	 * Annotation @GetMapping: Annotation (Anotação), que indica que o método abaixo responderá todaas as 
 	 * requisições do tipo GET que forem enviadas no endpoint /postagens
 	 * 
 	 * O Método getAll() será do tipo ResponseEntity porque ele responderá a requisição (Request),
@@ -97,7 +97,7 @@ public class PostagemController {
 	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 200 => OK, 
 	 * caso a Postagem seja encontrada. Caso não seja encontrada, a resposta será Not Found => 404
 	 * 
-	 * /@PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
+	 * Annotation @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método getByIdIfElse
 	 * 
 	 * Exemplo
@@ -143,7 +143,7 @@ public class PostagemController {
 	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 200 => OK, 
 	 * caso a Postagem seja encontrada. Caso não seja encontrada, a resposta será Not Found => 404
 	 * 
-	 * /@PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
+	 * Annotation @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método getByIdTryCatch
 	 * 
 	 * Exemplo
@@ -196,7 +196,7 @@ public class PostagemController {
 	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 200 => OK, 
 	 * caso a Postagem seja encontrada. Caso não seja encontrada, a resposta será Not Found => 404
 	 * 
-	 * @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
+	 * Annotation @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método getById
 	 * 
 	 * Exemplo
@@ -333,7 +333,7 @@ public class PostagemController {
 	 * caso a Postagem seja encontrada e excluída da tabela. Caso não seja encontrada, a resposta será 
 	 * Internal Server Error => 500
 	 * 
-	 * /@PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
+	 * @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método deletePostagem
 	 * 
 	 * Exemplo
@@ -355,5 +355,5 @@ public class PostagemController {
 	public void deletePostagem(@PathVariable long id) {
 		postagemRepository.deleteById(id);
 	}	
-	
+
 }

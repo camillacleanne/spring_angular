@@ -2,7 +2,6 @@ package br.org.generation.blogpessoal.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +21,6 @@ public class Postagem {
 
 	@Id // Primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // Auto_incremento
-	@Column(name="codigo")
 	private long id; // bigint
 
 	@NotNull(message = "O atributo título é Obrigatório!") // Não pode ser nulo
@@ -34,17 +32,16 @@ public class Postagem {
 	private String texto; // varchar
 
 	/**
-	 * /@Temporal: Indica se o atributo receberá uma data ou um Timestamp (Data e hora do sistema)
+	 * Annotation @Temporal: Indica se o atributo receberá uma data ou um Timestamp (Data e hora do sistema)
 	 * 
 	 * System.currentTimeMillis(): insere os milisegundos na hora
 	 * 
 	 */
-
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis()); // Date Timestamp()
 
 	/**
-	 *  /@ManyToOne: Annotation (Anotação), que indica que a Classe Postagem terá um relacionamento
+	 *  Annotation @ManyToOne: Annotation (Anotação), que indica que a Classe Postagem terá um relacionamento
 	 *  do tipo Many To One (Muitos para Um) com a Classe Tema
 	 *  
 	 *  @JsonIgnoreProperties("postagem"): Annotation (Anotação), que desabilita a recursividade
@@ -57,15 +54,14 @@ public class Postagem {
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
-	
+
 	/**
 	 * 
 	 * Métodos Get e Set
 	 * 
 	 */	
-
 	public long getId() {
-		return this.id;
+		return id;
 	}
 
 	public void setId(long id) {
@@ -73,7 +69,7 @@ public class Postagem {
 	}
 
 	public String getTitulo() {
-		return this.titulo;
+		return titulo;
 	}
 
 	public void setTitulo(String titulo) {
@@ -81,7 +77,7 @@ public class Postagem {
 	}
 
 	public String getTexto() {
-		return this.texto;
+		return texto;
 	}
 
 	public void setTexto(String texto) {
@@ -89,7 +85,7 @@ public class Postagem {
 	}
 
 	public Date getData() {
-		return this.data;
+		return data;
 	}
 
 	public void setData(Date data) {
@@ -103,5 +99,5 @@ public class Postagem {
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
-
+	
 }
