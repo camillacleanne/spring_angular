@@ -36,8 +36,9 @@ public class TemaController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<Tema> getById(@PathVariable long id) {
-		return temaRepository.findById(id).map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.notFound().build());
+		return temaRepository.findById(id)
+		.map(resp -> ResponseEntity.ok(resp))
+		.orElse(ResponseEntity.notFound().build());
 	}
 
 	@GetMapping("/descricao/{descricao}")
@@ -50,61 +51,15 @@ public class TemaController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(temaRepository.save(tema));
 	}
 
-	/**
-	 * Optional<Tema> temaUpdate = temaRepository.findById(tema.getId());: Cria um 
-	 * objeto do tipo Tema (temaUpdate) que receberá o resultado 
-	 * da busca do tema por id (lê o id do objeto tema a partir do método getId())
-	 * 
-	 * if (temaUpdate.isPresent()): Verifica se o tema foi encontrado (se o objeto 
-	 * temaUpdate está preenchido)
-	 * 
-	 * return ResponseEntity.status(HttpStatus.OK).body(temaRepository.save(tema));: 
-	 * Se o tema foi encontrado, o mesmo será atualizado através do objeto tema
-	 * 
-	 * throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Tema não encontrado!", null);: 
-	 * Caso contrário, será exibido um HTTP Status Not Found = 404, ou seja, tema 
-	 * não encontrado
-	 */
-
 	@PutMapping
 	public ResponseEntity<Tema> putTema(@RequestBody Tema tema) {
-
-		Optional<Tema> temaUpdate = temaRepository.findById(tema.getId());
-
-		if (temaUpdate.isPresent()) {
-			return ResponseEntity.status(HttpStatus.OK).body(temaRepository.save(tema));
-		} else {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Tema não encontrado!", null);
-		}
+		return ResponseEntity.status(HttpStatus.OK).body(temaRepository.save(tema));
 
 	}
 
 	@DeleteMapping("/{id}")
 	public void deleteTema(@PathVariable long id) {
-
-		/**
-		 * Optional<Tema> tema = temaRepository.findById(id);: Cria um objeto 
-		 * do tipo Tema que receberá o resultado da busca do tema por id 
-		 * (variável de caminho)
-		 * 
-		 * if (tema.isPresent()): Verifica se o tema foi encontrado (se o objeto 
-		 * tema está preenchido)
-		 * 
-		 * temaRepository.deleteById(id);: Se o tema foi encontrado, o mesmo será 
-		 * apagado
-		 * 
-		 * throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Tema não encontrado!", null);:
-		 * Caso contrário, será exibido um HTTP Status Not Found = 404, ou seja, tema 
-		 * não encontrado
-		 */
-
-		Optional<Tema> tema = temaRepository.findById(id);
-
-		if (tema.isPresent()) {
-			temaRepository.deleteById(id);
-		} else {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Tema não encontrado!", null);
-		}
+		temaRepository.deleteById(id);
 	}
 
 }
