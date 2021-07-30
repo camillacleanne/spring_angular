@@ -8,8 +8,6 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
-Aula 06 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_06/" target="_blank">Clique aqui</a>) - Serviços personalizados - Blog Pessoal
-
 Aula 05 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_05/" target="_blank">Clique aqui</a>) - Spring Security
 
 Aula 04 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_04/" target="_blank">Clique aqui</a>) - CRUD da Classe Tema e Relacionamento com a Classe Postagem
