@@ -8,7 +8,7 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
-Aula 05 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_05/" target="_blank">Clique aqui</a>) - Spring Security
+Aula 05 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_05/" target="_blank">Clique aqui</a>) - Exercício 01 - Loja de Games
 
 Aula 04 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_04/" target="_blank">Clique aqui</a>) - CRUD da Classe Tema e Relacionamento com a Classe Postagem
 

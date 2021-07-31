@@ -21,4 +21,5 @@
 - [x] Criação da Camada Controller
   - [x] PostagemController 
   - [x] TemaController
+- [x] Criação do Relacionamento
 

@@ -1,14 +1,27 @@
-<h1>Spring Security no Blog Pessoal</h1>
+<h1>Exercício 01 - Loja de Games</h1>
 
 
 
-<h2>Referências</h2>
+<h2>Etapas:</h2>
 
-<a href="https://spring.io/projects/spring-security" target="_blank">Documentação Oficial do Spring Security</a>
 
-<a href="https://jwt.io/" target="_blank">Página Oficial do JWT</a>
-
-<a href="https://www.base64url.com/" target="_blank">Conversor - Base 64</a>
-
-<a href="https://commons.apache.org/proper/commons-codec/" target="_blank">Dependência commons-codec</a>
+- [x] Criação do Projeto Spring
+- [x] Configuração das Dependências iniciais do Projeto
+  - [x] Spring Web
+  - [x] Spring Boot Dev Tools
+  - [x] Spring Data JPA
+  - [x] MySQL Connector
+  - [x] Validation
+- [x] Configuração do Banco de dados
+  - [x] application.properties
+- [x] Criação da Camada Model
+  - [x] Categoria
+  - [x] Produto
+- [x] Criação da Camada Repository
+  - [x] CategoriaRepository
+  - [x] ProdutoRepository
+- [x] Criação da Camada Controller
+  - [x] CategoriaController 
+  - [x] ProdutoController
+- [x] Criação do Relacionamento
 
