@@ -8,6 +8,8 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
+Aula 06 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_06/" target="_blank">Clique aqui</a>) - Exercício 02 - Farmácia
+
 Aula 05 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_05/" target="_blank">Clique aqui</a>) - Exercício 01 - Loja de Games
 
 Aula 04 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_04/" target="_blank">Clique aqui</a>) - CRUD da Classe Tema e Relacionamento com a Classe Postagem
@@ -31,8 +33,6 @@ Guia de Atalhos - Eclipse (<a href="https://github.com/rafaelq80/Spring/blob/mai
 ## Ferramentas
 
 Requisitos de software (<a href="https://github.com/rafaelq80/Spring/blob/main/sts/" target="_blank">Clique aqui</a>)
-
-
 
 # Referências sobre Spring
 
