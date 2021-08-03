@@ -10,14 +10,24 @@ import br.org.generation.farmacia.model.Produto;
 
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long>{
-	 
+	
+	
 	public List <Produto> findAllByNomeContainingIgnoreCase(String nome);
-	// Equivalente a select * from tb_produtos where nome like "%xxxx%";
 	
+	/**
+	 *  Método Personalizado - Buscar por Nome do Produto ou pelo Nome do Laboratório
+	 *  
+	 *  MySQL: select * from tb_produtos where nome = "produto" or laboratorio = "laboratorio";
+	 */
+	 
 	public List <Produto> findByNomeOrLaboratorio(String nome, String laboratorio);
-	// Equivalente a select * from tb_produtos where nome = xxx or laboratorio = xxx;
 	
+	/**
+	 *  Método Personalizado - Buscar todos os Produtos cujo o preço seja maior do que um valor digitado
+	 *  
+	 *  MySQL: select * from tb_produtos where preco > 50.00;
+	 */
+	 
 	public List <Produto> findByPrecoGreaterThan(BigDecimal preco);
-	// Equivalente a select * from tb_produtos where preco > 000;
 
 }
