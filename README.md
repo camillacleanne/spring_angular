@@ -8,6 +8,8 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
+Aula 07 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_07/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal
+
 Aula 06 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_06/" target="_blank">Clique aqui</a>) - Exercício 02 - Farmácia
 
 Aula 05 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_05/" target="_blank">Clique aqui</a>) - Exercício 01 - Loja de Games
