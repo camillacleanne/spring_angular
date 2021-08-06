@@ -1,19 +1,20 @@
 package br.org.generation.blogpessoal.model;
 
 public class UsuarioLogin {
-
+	
 	private long id;
 
 	private String nome;
-
+	
 	private String usuario;
-
+	
 	private String senha;
-
+	
 	private String token;
 
+
 	public long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(long id) {
@@ -32,14 +33,6 @@ public class UsuarioLogin {
 		return usuario;
 	}
 
-	public String getToken() {
-		return token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-	}
-
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
@@ -51,4 +44,13 @@ public class UsuarioLogin {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+	
 }
