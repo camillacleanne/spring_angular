@@ -1,4 +1,4 @@
-# Implementando a Camada de Segurança com o Spring Security no Blog Pessoal
+# Implementando a Camada de Segurança com o Spring Security na Loja de Games
 
 Nesta atividade iremos implementar a camada de segurança da aplicação com o Spring Security. 
 

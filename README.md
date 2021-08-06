@@ -8,7 +8,7 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
-Aula 08 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_08/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal + Atributo Data de Nascimento
+Aula 08 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_08/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal + Atributo Data de Nascimento e Loja de Games
 
 Aula 07 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_07/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal
 
