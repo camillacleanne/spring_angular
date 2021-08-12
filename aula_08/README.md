@@ -1,6 +1,6 @@
 # Implementando a Camada de Segurança com o Spring Security na Loja de Games
 
-Nesta atividade iremos implementar a camada de segurança da aplicação com o Spring Security. 
+Nesta atividade iremos implementar a camada de segurança na aplicação Loja de Games com o Spring Security. 
 
 <h2>Boas Práticas</h2>
 

@@ -62,6 +62,19 @@ public class UsuarioService {
 		if(usuarioRepository.findById(usuario.getId()).isPresent()) {
 
 			/**
+			 * Checa se o usuário já existe antes de atualizar
+			 */
+			 
+			Optional<Usuario> buscaUsuario = usuarioRepository.findByUsuario(usuario.getUsuario());
+			
+			if( buscaUsuario.isPresent() ){
+
+				if(buscaUsuario.get().getId() != usuario.getId())
+					throw new ResponseStatusException(
+						HttpStatus.BAD_REQUEST, "Usuário já existe!", null);
+			}
+			
+			/**
 			 * Mesma verificação do método cadastrarUsuario
 			 */
 

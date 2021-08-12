@@ -8,7 +8,11 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
-Aula 08 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_08/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal + Atributo Data de Nascimento e Loja de Games
+Aula 10 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_10/" target="_blank">Clique aqui</a>) - Spring Testing + JUnit 5 - Loja de Games
+
+Aula 09 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_09/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal com checagem de idade e duplicidade do usuário
+
+Aula 08 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_08/" target="_blank">Clique aqui</a>) - Spring Security - Loja de Games
 
 Aula 07 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_07/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal
 
