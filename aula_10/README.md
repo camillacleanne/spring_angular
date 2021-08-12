@@ -12,7 +12,11 @@
 - [x] Crie os métodos construtores na Classe Usuario
   - [x] Construtor com os atributos
   - [x] Construtor vazio
+- [x] **Alteração:** Implementação do Método Delete em UsuarioController
 - [x] Crie a Classe de testes na Camada Model: UsuarioTest
 - [x] Crie a Classe de testes na Camada Repository: UsuarioRepositoryTest
 - [x] Crie a Classe de testes na Camada Controller: UsuarioControllerTest
+  - [x] **Alteração:** Login com o usuário em memória root
+  - [x] **Alteração:** Teste do Método Delete do Usuario
 - [x] Execute os testes com o Junit
+
