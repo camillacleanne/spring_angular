@@ -42,13 +42,13 @@
 
 
 
-1) Insere uma linha, Seria o equivalente a pressionar a tecla enter no final da linha.
+1) Insere uma nova linha. Seria o equivalente a pressionar a tecla enter no final da linha.
 
 ```html
 <br />
 ```
 
-2) Formata o texto entre as tags como Negrito
+2) Formata o texto entre as tags aplicando o estilo Negrito.
 
 ```html
 <b></b>
