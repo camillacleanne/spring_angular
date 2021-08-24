@@ -28,7 +28,7 @@ Aula 03 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_03/" target
 
 Aula 02 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_02/" target="_blank">Clique aqui</a>) - CRUD Postagens - Configuração do projeto, POM.xml, application.properties, Model, Repository e Controller (método findAll)
 
-Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target="_blank">Clique aqui</a>) - Hello World!
+Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target="_blank">Clique aqui</a>) - Hello World! + Exercícios Spring (Hello BSM's e Hello Objetivos)
 
 
 
