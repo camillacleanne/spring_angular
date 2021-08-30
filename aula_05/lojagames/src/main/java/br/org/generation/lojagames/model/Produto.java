@@ -31,6 +31,8 @@ public class Produto {
 	@NotNull(message = "Console é obrigatório!")
 	private String console;
 	
+	private int quantidade;
+	
 	@NotNull(message = "Preço é obrigatório!")
 	@Positive(message = "O preço deve ser maior do que zero!")
 	private BigDecimal preco;
@@ -71,6 +73,14 @@ public class Produto {
 		this.console = console;
 	}
 
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	public BigDecimal getPreco() {
 		return preco;
 	}
@@ -86,5 +96,6 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
 
 }
