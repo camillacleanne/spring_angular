@@ -38,22 +38,22 @@ public class ProdutoController {
 	}
 	
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Produto>> getByName(@PathVariable String nome){
+	public ResponseEntity<List<Produto>> getByNome(@PathVariable String nome){
 		return ResponseEntity.ok(produtoRepository.findAllByNomeContainingIgnoreCase(nome));
 	}	
 	
 	@PostMapping
-	public ResponseEntity<Produto> post(@RequestBody Produto produto){
+	public ResponseEntity<Produto> postProduto(@RequestBody Produto produto){
 		return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produto));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Produto> put(@RequestBody Produto produto){
+	public ResponseEntity<Produto> putProduto(@RequestBody Produto produto){
 		return ResponseEntity.status(HttpStatus.OK).body(produtoRepository.save(produto));
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id){
+	public void deleteProduto(@PathVariable long id){
 		produtoRepository.deleteById(id);		
 	}
 

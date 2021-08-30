@@ -41,25 +41,25 @@ public class CategoriaController {
 	}
 	
 	@GetMapping("/tipo/{tipo}")
-	public ResponseEntity<List<Categoria>> GetByTipo(@PathVariable String tipo){
+	public ResponseEntity<List<Categoria>> getByTipo(@PathVariable String tipo){
 		
 		return ResponseEntity.ok(categoriaRepository.findAllByTipoContainingIgnoreCase(tipo));	
 	}
 	
 	@PostMapping
-	public ResponseEntity<Categoria> post (@RequestBody Categoria categoria){
+	public ResponseEntity<Categoria> postCategoria(@RequestBody Categoria categoria){
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(categoriaRepository.save(categoria));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Categoria> put (@RequestBody Categoria categoria){
+	public ResponseEntity<Categoria> putCategoria(@RequestBody Categoria categoria){
 		
 		return ResponseEntity.status(HttpStatus.OK).body(categoriaRepository.save(categoria));
 	}
 	
 	@DeleteMapping("/{id}")
-	public void getId(@PathVariable long id) {
+	public void deleteCategoria(@PathVariable long id) {
 		
 		categoriaRepository.deleteById(id);
 	}
