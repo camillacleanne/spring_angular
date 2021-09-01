@@ -28,47 +28,63 @@ public class ProdutoController {
 	private ProdutoRepository produtoRepository;
 	
 	@GetMapping
-	public ResponseEntity<List<Produto>> GetAll(){ 
+	public ResponseEntity<List<Produto>> getAll(){ 
 		return ResponseEntity.ok(produtoRepository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Produto> GetById(@PathVariable long id){
-		return produtoRepository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	public ResponseEntity<Produto> getById(@PathVariable long id){
+		return produtoRepository.findById(id)
+			.map(resp -> ResponseEntity.ok(resp))
+			.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Produto>> GetByTitulo(@PathVariable String nome){
+	public ResponseEntity<List<Produto>> getByTitulo(@PathVariable String nome){
 		return ResponseEntity.ok(produtoRepository.findAllByNomeContainingIgnoreCase(nome));
 	}
 	
 	@PostMapping 
-	public ResponseEntity<Produto> post(@RequestBody Produto produto){ 
+	public ResponseEntity<Produto> postProduto(@RequestBody Produto produto){ 
 		return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produto));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Produto> put(@RequestBody Produto produto){ 
+	public ResponseEntity<Produto> putProduto(@RequestBody Produto produto){ 
 		return ResponseEntity.status(HttpStatus.OK).body(produtoRepository.save(produto)); 
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id) {
+	public void deleteProduto(@PathVariable long id) {
 		produtoRepository.deleteById(id);
 	}
 	
 	// Consulta por nome ou laboratório
 	
-	@GetMapping("/nome/{nome}/laboratorio/{laboratorio}")
-	public ResponseEntity<List<Produto>> GetByNomeOuLaboratorio(@PathVariable String nome, @PathVariable String laboratorio){
+	@GetMapping("/nome/{nome}/oulaboratorio/{laboratorio}")
+	public ResponseEntity<List<Produto>> getByNomeOuLaboratorio(@PathVariable String nome, @PathVariable String laboratorio){
 		return ResponseEntity.ok(produtoRepository.findByNomeOrLaboratorio(nome, laboratorio));
 	}
 	
-	// Consulta pelo preço maior do que o preço digitado
+	// Consulta por nome e laboratório
+	
+	@GetMapping("/nome/{nome}/elaboratorio/{laboratorio}")
+	public ResponseEntity<List<Produto>> getByNomeELaboratorio(@PathVariable String nome, @PathVariable String laboratorio){
+		return ResponseEntity.ok(produtoRepository.findByNomeAndLaboratorio(nome, laboratorio));
+	}
+		
+	// Consulta pelo preço maior do que o preço digitado emm ordem crescente
 	
 	@GetMapping("/preco_maior/{preco}")
 	public ResponseEntity<List<Produto>> getPrecoMaiorQue(@PathVariable BigDecimal preco){ 
-		return ResponseEntity.ok(produtoRepository.findByPrecoGreaterThan(preco));
+		return ResponseEntity.ok(produtoRepository.findByPrecoGreaterThanOrderByPreco(preco));
 	}
 	
+	// Consulta pelo preço menor do que o preço digitado em ordem decrescente
+	
+	@GetMapping("/preco_menor/{preco}")
+	public ResponseEntity<List<Produto>> getPrecoMenorQue(@PathVariable BigDecimal preco){ 
+		return ResponseEntity.ok(produtoRepository.findByPrecoLessThanOrderByPrecoDesc(preco));
+	}
+		
 }
