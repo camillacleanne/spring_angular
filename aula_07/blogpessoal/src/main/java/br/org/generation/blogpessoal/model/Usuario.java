@@ -22,13 +22,13 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
-	@NotNull(message = "O Nome é Obrigatório!")
+	@NotNull(message = "O atributo Nome é Obrigatório!")
 	private String nome;
 
-	@NotNull(message = "O Usuário é Obrigatório!")
+	@NotNull(message = "O atributo Usuário é Obrigatório!")
 	private String usuario;
 
-	@NotNull(message = "A Senha é Obrigatória!")
+	@NotNull(message = "O atributo Senha é Obrigatória!")
 	@Size(min = 8, message = "A Senha deve ter no mínimo 8 caracteres")
 	private String senha;
 
