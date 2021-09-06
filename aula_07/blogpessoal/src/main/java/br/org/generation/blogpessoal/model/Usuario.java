@@ -28,10 +28,28 @@ public class Usuario {
 	@NotNull(message = "O atributo Usuário é Obrigatório!")
 	private String usuario;
 
-	@NotNull(message = "O atributo Senha é Obrigatória!")
+	/**
+	 * A anotação @Size está definida apenas com o valor min
+	 * porque ao criptografar a senha a mesma terá uma tamanho
+	 * muito maior (em numero de caracteres) do que a senha
+	 * não ciptografada.
+	 * 
+	 * Exemplo: admin123 -> 8 caracteres
+	 * admin123 criptografado -> 60 caracteres
+	 */
+	@NotNull(message = "O atributo Senha é Obrigatório!")
 	@Size(min = 8, message = "A Senha deve ter no mínimo 8 caracteres")
 	private String senha;
 
+	/**
+	 * CascadeType.REMOVE -> Ele propaga a operação de remoção de um objeto Pai para um 
+	 * objeto Filho. 
+	 * Apenas quando remover a Entidade Usuario, também será removida todas as entidades 
+	 * Postagens associadas. Nas demais operações não haverá a propagação.
+	 * 
+	 * CascadeType.ALL -> Ele propaga todas a operações (Inserir, Listar, Atualizar e Apagar)
+	 * de um objeto Pai para um objeto Filho. 
+	 */
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;

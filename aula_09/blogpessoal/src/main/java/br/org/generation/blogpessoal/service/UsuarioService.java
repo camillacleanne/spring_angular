@@ -3,6 +3,7 @@ package br.org.generation.blogpessoal.service;
 import java.nio.charset.Charset;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.List;
 import java.util.Optional;
 
 import org.apache.commons.codec.binary.Base64;
@@ -22,7 +23,19 @@ public class UsuarioService {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 
-	public Optional<Usuario> cadastrarUsuario(Usuario usuario) {
+	public List<Usuario> listarUsuarios(){
+
+		return usuarioRepository.findAll();
+
+	}
+
+	public Optional<Usuario> buscarUsuarioId(long id){
+
+		return usuarioRepository.findById(id);
+
+	}
+	
+	public Optional <Usuario> cadastrarUsuario(Usuario usuario) {
 		
 		
 		/**
@@ -57,25 +70,15 @@ public class UsuarioService {
 	}
 
 	
-	public Optional<Usuario> atualizarUsuario(Usuario usuario){
+	public Optional <Usuario> atualizarUsuario(Usuario usuario){
 		
+		/**
+		 * Checa pelo Id se o usuário existe
+		 */
 		if(usuarioRepository.findById(usuario.getId()).isPresent()) {
-
-			/**
-			 * Checa se o usuário já existe antes de atualizar
-			 */
-			 
-			Optional<Usuario> buscaUsuario = usuarioRepository.findByUsuario(usuario.getUsuario());
-			
-			if( buscaUsuario.isPresent() ){
-
-				if(buscaUsuario.get().getId() != usuario.getId())
-					throw new ResponseStatusException(
-						HttpStatus.BAD_REQUEST, "Usuário já existe!", null);
-			}
 			
 			/**
-			 * Mesma verificação do método cadastrarUsuario
+			 * Checa a data de nascimento
 			 */
 
 			int idade = Period.between(usuario.getDataNascimento(), LocalDate.now()).getYears();
@@ -94,7 +97,7 @@ public class UsuarioService {
 		}else {
 			
 			/**
-			 * Lança uma Exception do tipo Response Status Not Found
+			 * Se não existir lança uma Exception do tipo Response Status Not Found
 			 */
 
 			throw new ResponseStatusException(
@@ -127,7 +130,7 @@ public class UsuarioService {
 		}
 		
 		/**
-		 * Lanço uma Exception do tipo Response Status Unauthorized
+		 * Lança uma Exception do tipo Response Status Unauthorized
 		*/
 		
 		throw new ResponseStatusException(

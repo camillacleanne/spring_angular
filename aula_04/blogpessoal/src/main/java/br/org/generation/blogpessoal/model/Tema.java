@@ -25,7 +25,7 @@ public class Tema{
 		private String descricao;
 		
 		/**
-	 *  /@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL): Annotation (Anotação), que indica 
+	 *  A Annotation @OneToMany(mappedBy = "tema", cascade = CascadeType.ALL): indica 
 	 *  que a Classe Tema terá um relacionamento do tipo One To Many (Um para Muitos) com a Classe 
 	 *  Tema
 	 *  

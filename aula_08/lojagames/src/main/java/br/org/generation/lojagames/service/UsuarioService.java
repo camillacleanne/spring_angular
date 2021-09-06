@@ -22,6 +22,13 @@ public class UsuarioService {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
+	public String encoder(String senha){
+
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		return encoder.encode(senha);
+
+	}
+
 	public Optional <Usuario> cadastrarUsuario(Usuario usuario){
 		
 		if(usuarioRepository.findByUsuario(usuario.getUsuario()).isPresent())
@@ -32,10 +39,12 @@ public class UsuarioService {
 		if (idade < 18)
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "O Usuário é menor de idade!", null);
 			
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(); 
-		
+		/*BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(); 
+			
 		String senhaEncoder = encoder.encode(usuario.getSenha());
-		usuario.setSenha(senhaEncoder);
+		usuario.setSenha(senhaEncoder);*/
+		
+		usuario.setSenha(encoder(usuario.getSenha()));
 		
 		return Optional.of(usuarioRepository.save(usuario));
 		
@@ -50,10 +59,12 @@ public class UsuarioService {
 			if (idade < 18)
 				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "O Usuário é menor de idade!", null);
 			
-			BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(); 
+			/*BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(); 
 			
 			String senhaEncoder = encoder.encode(usuario.getSenha());
-			usuario.setSenha(senhaEncoder);
+			usuario.setSenha(senhaEncoder);*/
+
+			usuario.setSenha(encoder(usuario.getSenha()));
 			
 			return Optional.of(usuarioRepository.save(usuario));
 			

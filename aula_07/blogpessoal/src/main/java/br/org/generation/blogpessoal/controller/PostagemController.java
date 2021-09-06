@@ -31,6 +31,9 @@ public class PostagemController {
 		return ResponseEntity.ok(postagemRepository.findAll());
 	}
 
+	/**
+	 * Foi mantido apenas o método com a Expressão Lambda
+	 */
 	@GetMapping("/{id}")
 	public ResponseEntity<Postagem> getById(@PathVariable long id) {
 		return postagemRepository.findById(id)

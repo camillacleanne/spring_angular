@@ -14,20 +14,20 @@ import br.org.generation.blogpessoal.repository.PostagemRepository;
 
 /**
  * 
- * /@RestController: Annotation (Anotação), que indica que a Classe é uma RestController,
- * ou seja, é responsável por responder às requisições http enviadas para um endpoint
+ * Annotation @RestController: indica que a Classe é uma RestController, ou seja, 
+ * é responsável por responder às requisições http enviadas para um endpoint 
  * (endereço) definido na anotação @RequestMapping
  * 
- * @RequestMapping("/postagens"): Annotation (Anotação), que indica o endpoint (endereço) 
- * que a controladora responderá as requisições 
+ * Annotation @RequestMapping("/postagens"): indica o endpoint (endereço) que a 
+ * controladora responderá as requisições 
  * 
- * @CrossOrigin("*"): Annotation (Anotação), que indica que a classe controladora permitirá o 
+ * Annotation @CrossOrigin("*"): indica que a classe controladora permitirá o 
  * recebimento de requisições realizadas de fora do domínio (localhost, em nosso caso) ao qual 
  * ela pertence. Essa anotação é essencial para que o front-end (Angular em nosso caso), tenha
  * acesso à nossa API (O termo técnico é consumir a API)
  * 
  * Para as versões mais recentes do Angular, recomenda-se alterar esta anotação para: 
- * /@CrossOrigin(origins = "*", allowedHeaders = "*") 
+ * a annotation @CrossOrigin(origins = "*", allowedHeaders = "*") 
  * Esta anotação, além de liberar as origens, libera também os cabeçalhos das requisições
  * 
  */
@@ -58,7 +58,7 @@ public class PostagemController {
 	/**
 	 * Listar todas as Postagens
 	 *  
-	 * /@GetMapping: Annotation (Anotação), que indica que o método abaixo responderá todaas as 
+	 * Annotation @GetMapping: indica que o método abaixo responderá todaas as 
 	 * requisições do tipo GET que forem enviadas no endpoint /postagens
 	 * 
 	 * O Método getAll() será do tipo ResponseEntity porque ele responderá a requisição (Request),

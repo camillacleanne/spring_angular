@@ -21,20 +21,20 @@ import br.org.generation.blogpessoal.repository.PostagemRepository;
 
 /**
  * 
- * Annotation @RestController: Annotation (Anotação), que indica que a Classe é uma RestController,
- * ou seja, é responsável por responder às requisições http enviadas para um endpoint
+ * Annotation @RestController: indica que a Classe é uma RestController, ou seja, 
+ * é responsável por responder às requisições http enviadas para um endpoint 
  * (endereço) definido na anotação @RequestMapping
  * 
- * @RequestMapping("/postagens"): Annotation (Anotação), que indica o endpoint (endereço) 
- * que a controladora responderá as requisições 
+ * Annotation @RequestMapping("/postagens"): indica o endpoint (endereço) que a 
+ * controladora responderá as requisições 
  * 
- * @CrossOrigin("*"): Annotation (Anotação), que indica que a classe controladora permitirá o 
+ * Annotation @CrossOrigin("*"): indica que a classe controladora permitirá o 
  * recebimento de requisições realizadas de fora do domínio (localhost, em nosso caso) ao qual 
  * ela pertence. Essa anotação é essencial para que o front-end (Angular em nosso caso), tenha
  * acesso à nossa API (O termo técnico é consumir a API)
  * 
  * Para as versões mais recentes do Angular, recomenda-se alterar esta anotação para: 
- * Annotation @CrossOrigin(origins = "*", allowedHeaders = "*") 
+ * a annotation @CrossOrigin(origins = "*", allowedHeaders = "*") 
  * Esta anotação, além de liberar as origens, libera também os cabeçalhos das requisições
  * 
  */
@@ -65,7 +65,7 @@ public class PostagemController {
 	/**
 	 * Listar todas as Postagens
 	 *  
-	 * Annotation @GetMapping: Annotation (Anotação), que indica que o método abaixo responderá todaas as 
+	 * Annotation @GetMapping: indica que o método abaixo responderá todaas as 
 	 * requisições do tipo GET que forem enviadas no endpoint /postagens
 	 * 
 	 * O Método getAll() será do tipo ResponseEntity porque ele responderá a requisição (Request),
@@ -82,6 +82,7 @@ public class PostagemController {
 	 * retornará 200.
 	 */
 
+
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getAll (){
 		return ResponseEntity.ok(postagemRepository.findAll()); // OK = 200
@@ -97,7 +98,7 @@ public class PostagemController {
 	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 200 => OK, 
 	 * caso a Postagem seja encontrada. Caso não seja encontrada, a resposta será Not Found => 404
 	 * 
-	 * Annotation @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
+	 * A Annotation @PathVariable long id: insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método getByIdIfElse
 	 * 
 	 * Exemplo
@@ -133,56 +134,9 @@ public class PostagemController {
 		return ResponseEntity.notFound().build();
 	}
 
-	/**
-	 * Listar postagem por id - Forma 02: Usando try/catch
-	 *  
-	 * @GetMapping("idtrycatch/{id}"): Annotation (Anotação), que indica que o método abaixo responderá todas
-	 * as requisições do tipo GET que forem enviadas no endpoint /postagens/ifelse/id
-	 * 
-	 * O Método getByIdTryCatch(@PathVariable long id) será do tipo ResponseEntity porque ele responderá a 
-	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 200 => OK, 
-	 * caso a Postagem seja encontrada. Caso não seja encontrada, a resposta será Not Found => 404
-	 * 
-	 * Annotation @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
-	 * passada no endereço da requisição, e insere no parâmetro id do método getByIdTryCatch
-	 * 
-	 * Exemplo
-	 * 
-	 * http://localhost:8080/postagens/idtrycatch/1
-	 * 
-	 * o parâmetro id do método receberá 1 (Id que será procurado na tabela postagens via findById(id))
-	 * 
-	 * <Postagem>: Como o Método listará apenas 1 registro da nossa tabela, o método retornará 
-	 * dentro da resposta um objeto do tipo Postagem, que são os dados da tabela.
-	 * 
-	 * Optional<Postagem> postagem = postagemRepository.findById(id);: Cria um objeto do tipo Postagem
-	 * e armazena o resultado do método findById(id), que é um método padrão da interface JpaRepository
-	 * O Optional serve para evitar o erro NullPointerException (Objeto nulo), caso a Postagem não seja 
-	 * encontrada na tabela.
-	 * 
-	 * Try/Catch: verifica se houve algum erro na execução do método findById(id) (A Postagem existe?)
-	 * 
-	 * return ResponseEntity.ok(postagem.get());: Se a postagem existir, retorna o status OK = 200
-	 * 
-	 * return ResponseEntity.notFound().build();: Se a postagem não for encontrada (erro!), retorna o status 
-	 * Not Found = 404
-	 *
-	 */
-
-	@GetMapping("/idtrycatch/{id}")
-	public ResponseEntity<Postagem> getByIdTryCatch(@PathVariable long id) {
-
-		Optional<Postagem> postagem = postagemRepository.findById(id);
-		try {
-			return ResponseEntity.ok(postagem.get());
-		} catch (Exception e) {
-			return ResponseEntity.notFound().build();
-		}
-
-	}
 
 	/*
-	 * Listar postagem por id - Forma 03: usando Lambda
+	 * Listar postagem por id - Forma 02: usando Lambda
 	 *  
 	 * As expressões Lambda representam uma função anônima, ou seja, uma função lambda é uma função sem declaração, 
 	 * isto é, não é necessário colocar um nome, um tipo de retorno e o modificador de acesso. A ideia é que o 
@@ -196,7 +150,7 @@ public class PostagemController {
 	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 200 => OK, 
 	 * caso a Postagem seja encontrada. Caso não seja encontrada, a resposta será Not Found => 404
 	 * 
-	 * Annotation @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
+	 * @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método getById
 	 * 
 	 * Exemplo
@@ -333,7 +287,7 @@ public class PostagemController {
 	 * caso a Postagem seja encontrada e excluída da tabela. Caso não seja encontrada, a resposta será 
 	 * Internal Server Error => 500
 	 * 
-	 * @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
+	 * A Annotation @PathVariable long id: insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método deletePostagem
 	 * 
 	 * Exemplo
