@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.org.generation.lojagames.model.Usuario;
 import br.org.generation.lojagames.model.UsuarioLogin;
-import br.org.generation.lojagames.repository.UsuarioRepository;
 import br.org.generation.lojagames.service.UsuarioService;
 
 @RestController
@@ -29,12 +28,20 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;
 	
-	@Autowired
-	private UsuarioRepository usuarioRepository;
-		
 	@GetMapping("/all")
 	public ResponseEntity <List<Usuario>> getAll(){
+		
 		return ResponseEntity.ok(usuarioService.listarUsuarios());
+		
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity <Usuario> getById(@PathVariable long id){
+		
+		return usuarioService.buscarUsuarioId(id)
+				.map(resp -> ResponseEntity.status(HttpStatus.OK).body(resp))
+				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+		
 	}
 	
 	@PostMapping("/logar")
@@ -54,7 +61,7 @@ public class UsuarioController {
 			.orElse(ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
 	}
 	
-	@PutMapping("/alterar")
+	@PutMapping("/atualizar")
 	public ResponseEntity<Usuario> putUsuario(@RequestBody Usuario usuario){
 		
 		return usuarioService.atualizarUsuario(usuario)
@@ -64,8 +71,15 @@ public class UsuarioController {
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	public void deleteUsuario(@PathVariable long id){
-		usuarioRepository.deleteById(id);
-	}
+	public ResponseEntity<Long> deleteUsuario(@PathVariable Long id) {
+
+        boolean isRemoved = usuarioService.excluirUsuario(id);
+
+        if (!isRemoved) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(id, HttpStatus.OK);
+    }
 	
 }

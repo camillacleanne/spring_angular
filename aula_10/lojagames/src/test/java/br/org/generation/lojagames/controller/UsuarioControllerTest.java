@@ -79,7 +79,7 @@ public class UsuarioControllerTest {
 		HttpEntity<Usuario> request = new HttpEntity<Usuario>(usuarioUpdate);
 		ResponseEntity<Usuario> resposta = testRestTemplate
 				.withBasicAuth("root", "root")
-				.exchange("/usuarios/alterar", HttpMethod.PUT, request, Usuario.class);
+				.exchange("/usuarios/atualizar", HttpMethod.PUT, request, Usuario.class);
 		assertEquals(HttpStatus.OK, resposta.getStatusCode());
 	
 	}

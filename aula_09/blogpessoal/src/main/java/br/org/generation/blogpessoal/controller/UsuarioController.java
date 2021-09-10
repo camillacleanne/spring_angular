@@ -56,7 +56,7 @@ public class UsuarioController {
 		
 	}
 	
-	@PutMapping("/alterar")
+	@PutMapping("/atualizar")
 	public ResponseEntity<Usuario> putUsuario(@RequestBody Usuario usuario){
 		
 		return usuarioService.atualizarUsuario(usuario)

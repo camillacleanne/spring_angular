@@ -78,6 +78,26 @@ public class UsuarioService {
 		if(usuarioRepository.findById(usuario.getId()).isPresent()) {
 			
 			/**
+			 * Checa se o usuário já existe antes de atualizar
+			 */
+			 
+			Optional<Usuario> buscaUsuario = usuarioRepository.findByUsuario(usuario.getUsuario());
+			
+			if( buscaUsuario.isPresent() ){
+
+				/**
+				 * Checa se o usuário (email) pertence ao mesmo usuário ou se pertence
+				 * a outro usuário através do Id.
+				 * 
+				 * Caso o usuário seja encontrado na atualização é preciso ter certeza
+				 * que ele não esteja cadastrado em outro usuário.
+				 */
+				if(buscaUsuario.get().getId() != usuario.getId())
+					throw new ResponseStatusException(
+						HttpStatus.BAD_REQUEST, "Usuário já existe!", null);
+			}
+
+			/**
 			 * Checa a data de nascimento
 			 */
 
