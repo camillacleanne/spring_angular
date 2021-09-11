@@ -14,6 +14,9 @@ public class ProdutoService {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 
+	/**
+	 * Método Curtir -> Soma 1 ao atributo curtidos
+	 */
 	public Produto curtir(Long id) {
 
 		Produto produto = buscarProdutoPeloId(id);
@@ -24,6 +27,10 @@ public class ProdutoService {
 
 	}
 
+	/**
+	 * Método Descurtir -> Subtrai 1 do atributo curtidos enquanto for
+	 * maior do que zero. Se for igual a zero, mantém o zero 
+	 */
 	public Produto descurtir(Long id) {
 
 		Produto produto = buscarProdutoPeloId(id);
@@ -42,6 +49,10 @@ public class ProdutoService {
 
 	}
 
+	/**
+	 * Método buscarProdutoPeloId -> Implmenta o método findById checando
+	 * se o produto existe.
+	 */
 	private Produto buscarProdutoPeloId(Long id) {
 
 		Produto produtoSalvo = produtoRepository.findById(id).orElse(null);
