@@ -2,17 +2,21 @@
 
 Aulas sobre Spring - Generation
 
-<div align="center"><img src="https://i.imgur.com/w8tTOuT.png" title="source: imgur.com" /></div>
+<div align="center">
+    <img src="https://i.imgur.com/w8tTOuT.png" title="source: imgur.com" /> 
+    <strong>trilha</strong>
+    <img width="300px" src="https://i.imgur.com/GPOhooU.png" title="source: imgur.com" />
+</div>
 
 
 
 ## Aulas
 
-Aula 11 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_09/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal (Versão Final)
+Aula 11 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_11/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal (Versão Final)
 
-Aula 10 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_11/" target="_blank">Clique aqui</a>) - Loja de Games - Métodos Curtir, Descurtir e Trend Products
+Aula 10 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_10/" target="_blank">Clique aqui</a>) - Loja de Games - Métodos Curtir, Descurtir e Trend Products
 
-Aula 09 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_10/" target="_blank">Clique aqui</a>) - Spring Testing + JUnit 5 - Loja de Games
+Aula 09 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_09/" target="_blank">Clique aqui</a>) - Spring Testing + JUnit 5 - Loja de Games
 
 Aula 08 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_08/" target="_blank">Clique aqui</a>) - Spring Security - Loja de Games
 
