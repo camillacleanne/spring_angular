@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.org.generation.lojagames.model.Categoria;
 import br.org.generation.lojagames.repository.CategoriaRepository;
-import br.org.generation.lojagames.service.CategoriaService;
 
 @RestController
 @RequestMapping("/categorias")
@@ -27,12 +26,6 @@ public class CategoriaController {
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
-	/**
-	 * Injeção de dependência - Classe CategoriaService
-	 */
-	@Autowired
-	private CategoriaService categoriaService;
-
 	@GetMapping
 	private ResponseEntity<List<Categoria>> getAll(){
 		
@@ -70,13 +63,5 @@ public class CategoriaController {
 		
 		categoriaRepository.deleteById(id);
 	}
-
-	@GetMapping("/trendproducts")
-	public ResponseEntity<List<Categoria>> getTrendProducts() {
-		
-		return ResponseEntity.ok(categoriaService.trendProducts());
-	
-	}
-
 }
 

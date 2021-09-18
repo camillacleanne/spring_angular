@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.org.generation.lojagames.model.Produto;
 import br.org.generation.lojagames.repository.ProdutoRepository;
-import br.org.generation.lojagames.service.ProdutoService;
 
 @RestController	
 @RequestMapping("/produtos")
@@ -27,12 +26,6 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
-	/**
-	 * Injeção de dependência - Classe ProdutoService
-	 */
-	@Autowired
-	private ProdutoService produtoService;
-
 	@GetMapping("/all")
 	public ResponseEntity<List<Produto>> getAll(){
 		return ResponseEntity.ok(produtoRepository.findAll());
@@ -65,19 +58,6 @@ public class ProdutoController {
 		produtoRepository.deleteById(id);		
 	}
 
-	@PutMapping("/curtir/{id}")
-	public ResponseEntity<Produto> putCurtirProdutoId (@PathVariable Long id){
-		
-		return ResponseEntity.status(HttpStatus.OK).body(produtoService.curtir(id));
-	
-	}
-
-	@PutMapping("/descurtir/{id}")
-	public ResponseEntity<Produto> putDescurtirProdutoId (@PathVariable Long id){
-		
-		return ResponseEntity.status(HttpStatus.OK).body(produtoService.descurtir(id));
-	
-	}
 
 }
 

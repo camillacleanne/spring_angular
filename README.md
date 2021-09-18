@@ -8,11 +8,11 @@ Aulas sobre Spring - Generation
 
 ## Aulas
 
-Aula 11 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_11/" target="_blank">Clique aqui</a>) - Loja de Games - Métodos Curtir, Descurtir e Trend Products
+Aula 11 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_09/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal (Versão Final)
 
-Aula 10 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_10/" target="_blank">Clique aqui</a>) - Spring Testing + JUnit 5 - Loja de Games
+Aula 10 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_11/" target="_blank">Clique aqui</a>) - Loja de Games - Métodos Curtir, Descurtir e Trend Products
 
-Aula 09 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_09/" target="_blank">Clique aqui</a>) - Spring Security - Blog Pessoal (Versão Final)
+Aula 09 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_10/" target="_blank">Clique aqui</a>) - Spring Testing + JUnit 5 - Loja de Games
 
 Aula 08 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_08/" target="_blank">Clique aqui</a>) - Spring Security - Loja de Games
 
@@ -34,9 +34,7 @@ Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target
 
 ## Ebooks
 
-Guia JPA (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/guia_jpa.pdf" target="_blank">Clique aqui</a>) 
-
-Guia de Atalhos - Eclipse (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/atalhos_eclipse.pdf" target="_blank">Clique aqui</a>)
+Sumário (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/" target="_blank">Clique aqui</a>)
 
 
 
