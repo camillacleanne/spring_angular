@@ -110,6 +110,11 @@ public class UsuarioService {
 
 	}
 
+	/**
+	 *  A principal função do método autenticarUsuario, que é executado no endpoint logar,
+	 *  é gerar o token do usuário codificado em Base64. O login prorpiamente dito é executado
+	 *  pela BasicSecurityConfig em conjunto com as classes UserDetailsService e Userdetails
+	 */
 	public Optional<UsuarioLogin> autenticarUsuario(Optional<UsuarioLogin> usuarioLogin) {
 
 		/**

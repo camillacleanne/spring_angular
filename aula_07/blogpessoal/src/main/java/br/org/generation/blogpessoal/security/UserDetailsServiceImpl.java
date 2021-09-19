@@ -15,7 +15,7 @@ import br.org.generation.blogpessoal.repository.UsuarioRepository;
  *  Classe UserDetailsServiceImpl 
  * 
  *  Implementa a interface UserDetailsService, que é responsável por recuperar os dados
- *  do usuário no Banco de Dados pelo usuário e converte em um objeto da Classe 
+ *  do usuário no Banco de Dados pelo usuário e converter em um objeto da Classe 
  *  UserDetailsImpl.
  * 
  *  Por se tratar de uma implementação de uma interface, a classe deve ter em seu nome o 
@@ -38,7 +38,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	 * Sobrecarrega (@Override) o método loadUserByUsername.
 	 * 
 	 * A implementação de autenticação chama o método loadUserByUsername(String username),
-	 * método para obter os detalhes de um usuário com um determinado nome de usuário. 
+	 * para obter os dados de um usuário com um determinado nome de usuário. 
 	 * O nome do usuário deve ser único. O usuário retornado por este método é um objeto
 	 * da classe UserDetailsImpl. 
 	 * 

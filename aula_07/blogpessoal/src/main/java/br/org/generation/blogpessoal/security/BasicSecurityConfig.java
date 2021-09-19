@@ -14,16 +14,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * Classe BasicSecurityConfig
  * 
- * Esta classe é responsável por habilitar a segurança básica da aplicação.
+ * Esta classe é responsável por habilitar a segurança básica da aplicação e o login
+ * na aplicação.
  * 
  * Para habilitar a segurança HTTP no Spring, precisamos extender (herdar) 
  * a Classe WebSecurityConfigurerAdapter para fornecer uma configuração padrão 
  * no método configure (HttpSecurity http)
  * 
  * A configuração padrão garante que qualquer requisição enviada para a API 
- * seja autenticada com login baseado em formulário ou autenticação básica HTTP.
+ * seja autenticada com login baseado em formulário ou autenticação via Browser.
  * 
- * Para personalizar a autentiacação utilizaremos a sobrecarga dos métodos da
+ * Para personalizar a autenticação utilizaremos a sobrecarga dos métodos da
  * Classe WebSecurityConfigurerAdapter
  * 
  */
@@ -49,9 +50,13 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 	private UserDetailsService userDetailsService;
 
 	/**
-	 *  Sobrecarrega (@Override) o primeiro método Configure tem a função 
-	 *  de criar uma nova instância da Classe WebSecurityConfigurerAdapter
-	 *  com os parâmetros definidos no método.
+	 *  Sobrecarrega (@Override) o primeiro método Configure, que tem a função 
+	 *  de criar uma nova instância da Classe AuthenticationManagerBuilder e 
+	 *  define que o login será efetuado através dos usuários criados no Banco de dados.
+	 *  Para recuperar os dados do usuário no Banco de Dados utilizaremos a Interface 
+	 *  UserDetailsService.
+	 *  Outra alternativa de login seria acriação de um usuário em memória, que veremos nas
+	 *  próximas sessões.
 	 *  
 	 *  O método é do tipo protected por definição da classe.
 	 * 
@@ -70,6 +75,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		/**
 		 *  O objeto auth registra e cria uma nova instância do objeto userDetailsService
 		 *  da interface UserDetailsService implementada na Classe UserDetailsServiceImpl
+		 *  para recuperar os dados dos usuários gravados no Banco de dados.
 		 */
 		
 		 auth.userDetailsService(userDetailsService);
