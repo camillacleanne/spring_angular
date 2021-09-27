@@ -36,12 +36,6 @@ Aula 01 (<a href="https://github.com/rafaelq80/Spring/blob/main/aula_01/" target
 
 
 
-## Ebooks
-
-Sumário (<a href="https://github.com/rafaelq80/Spring/blob/main/ebooks/" target="_blank">Clique aqui</a>)
-
-
-
 ## Ferramentas
 
 Requisitos de software (<a href="https://github.com/rafaelq80/Spring/blob/main/sts/" target="_blank">Clique aqui</a>)

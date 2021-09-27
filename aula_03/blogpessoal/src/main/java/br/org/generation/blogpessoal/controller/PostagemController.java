@@ -1,7 +1,6 @@
 package br.org.generation.blogpessoal.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -88,60 +87,13 @@ public class PostagemController {
 		return ResponseEntity.ok(postagemRepository.findAll()); // OK = 200
 	}
 	
-	/**
-	 * Listar postagem por id - Forma 01: Usando if/else
-	 *  
-	 * @GetMapping("idifelse/{id}"): Annotation (Anotação), que indica que o método abaixo responderá todas
-	 * as requisições do tipo GET que forem enviadas no endpoint /postagens/ifelse/id
-	 * 
-	 * O Método getByIdIfElse(@PathVariable long id) será do tipo ResponseEntity porque ele responderá a 
-	 * requisição (Request), com uma HTTP Response (Resposta http), neste caso Response Status 200 => OK, 
-	 * caso a Postagem seja encontrada. Caso não seja encontrada, a resposta será Not Found => 404
-	 * 
-	 * A Annotation @PathVariable long id: insere a variável de path (caminho ou url do endpoint), 
-	 * passada no endereço da requisição, e insere no parâmetro id do método getByIdIfElse
-	 * 
-	 * Exemplo
-	 * 
-	 * http://localhost:8080/postagens/idifelse/1
-	 * 
-	 * o parâmetro id do método receberá 1 (Id que será procurado na tabela postagens via findById())
-	 * 
-	 * <Postagem>: Como o Método listará apenas 1 registro da nossa tabela, o método retornará 
-	 * dentro da resposta um objeto do tipo Postagem, que são os dados da tabela.
-	 * 
-	 * Optional<Postagem> postagem = postagemRepository.findById(id);: Cria um objeto do tipo Postagem
-	 * e armazena o resultado do método findById(id), que é um método padrão da interface JpaRepository
-	 * O Optional serve para evitar o erro NullPointerException (Objeto nulo), caso a Postagem não seja 
-	 * encontrada na tabela.
-	 * 
-	 * if (postagem.isPresent()): verifica se a Postagem existe
-	 * 
-	 * return ResponseEntity.ok(postagem.get());: Se a postagem existir, retorna o status OK = 200
-	 * 
-	 * return ResponseEntity.notFound().build();: Se a postagem não for encontrada, retorna o status 
-	 * Not Found = 404
-	 *
-	 */
-		
-	@GetMapping("idifelse/{id}")
-	public ResponseEntity<Postagem> getByIdIfElse(@PathVariable long id) {
-
-		Optional<Postagem> postagem = postagemRepository.findById(id);
-		if (postagem.isPresent()) {
-			return ResponseEntity.ok(postagem.get());
-		}
-		return ResponseEntity.notFound().build();
-	}
-
-
 	/*
-	 * Listar postagem por id - Forma 02: usando Lambda
+	 * Listar postagem por id - utilizando Expressões Lambda
 	 *  
 	 * As expressões Lambda representam uma função anônima, ou seja, uma função lambda é uma função sem declaração, 
 	 * isto é, não é necessário colocar um nome, um tipo de retorno e o modificador de acesso. A ideia é que o 
 	 * método seja declarado no mesmo lugar em que será usado. As expressões lambda em Java tem a sintaxe definida 
-	 * como (argumento) -> (corpo)
+	 * como: (argumento) -> (corpo)
 	 * 
 	 * @GetMapping("/{id}"): Annotation (Anotação), que indica que o método abaixo responderá todas
 	 * as requisições do tipo GET que forem enviadas no endpoint /postagens/id
@@ -153,7 +105,7 @@ public class PostagemController {
 	 * @PathVariable long id: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método getById
 	 * 
-	 * Exemplo
+	 * Exemplo:
 	 * 
 	 * http://localhost:8080/postagens/1
 	 * 
@@ -171,6 +123,10 @@ public class PostagemController {
 	 * .orElse(ResponseEntity.notFound().build()); : Se a postagem não for encontrada, retorna 
 	 * o status Not Found = 404
 	 *
+	 * Optional (map): É um contêiner para um valor que pode estar ausente. Em nosso contexto, tem como 
+	 * principal função evitar o erro do tipo NullPointerException (Objeto nulo), caso a Postagem procurada 
+	 * pelo método findById(id)não seja encontrada na Model Postagens.
+	 * 
 	 */
 
 	@GetMapping("/{id}")
@@ -193,7 +149,7 @@ public class PostagemController {
 	 * @PathVariable String titulo: Anntotation (anotação) que insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro titulo do método getByTitulo
 	 * 
-	 * Exemplo
+	 * Exemplo:
 	 * 
 	 * http://localhost:8080/postagens/titulo/primeira
 	 * 
@@ -290,7 +246,7 @@ public class PostagemController {
 	 * A Annotation @PathVariable long id: insere a variável de path (caminho ou url do endpoint), 
 	 * passada no endereço da requisição, e insere no parâmetro id do método deletePostagem
 	 * 
-	 * Exemplo
+	 * Exemplo:
 	 * 
 	 * http://localhost:8080/postagens/1
 	 * 
