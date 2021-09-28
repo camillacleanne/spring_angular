@@ -4,18 +4,9 @@
 
 
 - [x] Criação do Projeto Spring
-- [x] Configuração das Dependências iniciais do Projeto
-  - [x] Spring Web
-  - [x] Spring Boot Dev Tools
-  - [x] Spring Data JPA
-  - [x] MySQL Connector
-  - [x] Validation
+- [x] Configuração das Dependências do Projeto
 - [x] Configuração do Banco de dados
-  - [x] application.properties
 - [x] Criação da Camada Model
-  - [x] Postagem
 - [x] Criação da Camada Repository
-  - [x] PostagemRepository
 - [x] Criação da Camada Controller
-  - [x] PostagemController (Parcial)
 
