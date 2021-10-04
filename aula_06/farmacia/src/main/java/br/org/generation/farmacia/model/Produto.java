@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
@@ -34,7 +33,6 @@ public class Produto {
 	
 	@NotNull(message="Preço é obrigatório!")
 	@Positive(message = "Digite um valor maior do que zero")
-	@Digits(integer = 8, fraction = 2, message = "Digite um valor com no máximo 8 dígitos inteiros e 2 dígitos decimais")
 	private BigDecimal preco;
 	
 	private String foto;
