@@ -56,7 +56,9 @@ public class ProdutoController {
 	
 	@DeleteMapping("/{id}")
 	public void deleteProduto(@PathVariable long id) {
+		
 		produtoRepository.deleteById(id);
+		
 	}
 	
 	// Consulta por nome ou laboratório

@@ -37,6 +37,8 @@ public class Produto {
 	@Positive(message = "O preço deve ser maior do que zero!")
 	private BigDecimal preco;
 	
+	private String foto;
+
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
@@ -87,6 +89,14 @@ public class Produto {
 
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
+	}
+
+	public String getFoto() {
+		return this.foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
 	public Categoria getCategoria() {
