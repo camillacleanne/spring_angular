@@ -35,7 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 	/**
 	 * 
-	 * Sobrecarrega (@Override) o método loadUserByUsername.
+	 * Sobrescreve (@Override) o método loadUserByUsername.
 	 * 
 	 * A implementação de autenticação chama o método loadUserByUsername(String username),
 	 * para obter os dados de um usuário com um determinado nome de usuário. 
