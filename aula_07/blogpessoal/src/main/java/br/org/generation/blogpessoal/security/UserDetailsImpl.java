@@ -53,7 +53,7 @@ public class UserDetailsImpl implements UserDetails {
 	public UserDetailsImpl() {	}
 
 	/**
-	 *  Sobrecarrega (@Override) o método que retorna as Autorizações
+	 *  Sobrescreve (@Override) o método que retorna as Autorizações
 	 *  da conta do usuário. Nesta implementação, não há nenhuma autorização
 	 *  negada
 	 */
@@ -75,7 +75,7 @@ public class UserDetailsImpl implements UserDetails {
 	}
 
 	/**
-	 *  Sobrecarrega (@Override) o método que Indica se a conta do usuário 
+	 *  Sobrescreve (@Override) o método que Indica se a conta do usuário 
 	 *  expirou.
 	 */
 
@@ -85,7 +85,7 @@ public class UserDetailsImpl implements UserDetails {
 	}
 
 	/**
-	 *  Sobrecarrega (@Override) o método que Indica se o usuário 
+	 *  Sobrescreve (@Override) o método que Indica se o usuário 
 	 *  está bloqueado ou desbloqueado.
 	 */
 
@@ -95,7 +95,7 @@ public class UserDetailsImpl implements UserDetails {
 	}
 
 	/**
-	 *  Sobrecarrega (@Override) o método que indica se as 
+	 *  Sobrescreve (@Override) o método que indica se as 
 	 *  credenciais do usuário (senha) expiraram.  
 	 */
 	
@@ -105,7 +105,7 @@ public class UserDetailsImpl implements UserDetails {
 	}
 
 	/**
-	 *  Sobrecarrega (@Override) o método que Indica se o usuário 
+	 *  Sobrescreve (@Override) o método que Indica se o usuário 
 	 *  está habilitado ou desabilitado.
 	 *  Se mudar para false nenhum usuário conseguirá logar.
 	 */
