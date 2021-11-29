@@ -50,7 +50,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 	private UserDetailsService userDetailsService;
 
 	/**
-	 *  Sobrecarrega (@Override) o primeiro método Configure, que tem a função 
+	 *  Sobrescreve (@Override) o primeiro método Configure, que tem a função 
 	 *  de criar uma nova instância da Classe AuthenticationManagerBuilder e 
 	 *  define que o login será efetuado através dos usuários criados no Banco de dados.
 	 *  Para recuperar os dados do usuário no Banco de Dados utilizaremos a Interface 
@@ -97,7 +97,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	/**
-	 *  Sobrecarrega (@Override) o segundo método Configure que é responsável por
+	 *  Sobrescreve (@Override) o segundo método Configure que é responsável por
 	 *  criar uma instância da Classe HttpSecurity, que permite configurar a 
 	 *  segurança baseada na web para solicitações http específicas (endpoints)
 	 */
